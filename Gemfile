@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'bootstrap-sass', '2.1'
+#gem 'bootstrap-sass', '2.1'
+gem 'flat-ui-rails', github: 'illogic-al/flat-ui-rails'
 gem 'jquery-rails'
 gem 'haml', '4.0.1'
 gem 'haml-rails', '0.4'
@@ -37,11 +38,11 @@ end
 group :test do
   gem 'capybara', '1.1.2'
   # For linux
-  gem 'rb-inotify', '0.9'
-  #gem 'libnotify', '0.5.9' # For GUI notifications
+  gem 'rb-inotify', '0.9', require: false
+  gem 'libnotify', '0.5.9', require: false # For GUI notifications
   # For OSX
-  #gem 'rb-fsevent', '0.9.1', require: false
-  #gem 'growl', '1.0.3' # For GUI notifications
+  gem 'rb-fsevent', '0.9.1', require: false
+  gem 'growl', '1.0.3', require: false # For GUI notifications
 end
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

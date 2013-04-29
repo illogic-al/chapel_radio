@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/illogic-al/flat-ui-rails.git
+  revision: 62481688e23612c0363a8c3b2ae2afcfdf2a75a2
+  specs:
+    flat-ui-rails (0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,7 +36,6 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (2.1.0.0)
     builder (3.0.4)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -55,6 +60,7 @@ GEM
       multi_json (~> 1.0)
     ffi (1.6.0)
     formatador (0.2.4)
+    growl (1.0.3)
     guard (1.7.0)
       formatador (>= 0.2.4)
       listen (>= 0.6.0)
@@ -82,6 +88,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.7.7)
     kramdown (1.0.1)
+    libnotify (0.5.9)
     listen (0.7.3)
     logutils (0.6.0)
     lumberjack (1.0.3)
@@ -127,6 +134,7 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     rake (10.0.4)
+    rb-fsevent (0.9.1)
     rb-inotify (0.9.0)
       ffi (>= 0.5.0)
     rdoc (3.12.2)
@@ -184,17 +192,20 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
-  bootstrap-sass (= 2.1)
   capybara (= 1.1.2)
   coffee-rails (= 3.2.2)
+  flat-ui-rails!
+  growl (= 1.0.3)
   guard-rspec (= 1.2.1)
   guard-spork (= 1.4.2)
   haml (= 4.0.1)
   haml-rails (= 0.4)
   jquery-rails
+  libnotify (= 0.5.9)
   markdown (= 1.0.0)
   mysql
   rails (= 3.2.13)
+  rb-fsevent (= 0.9.1)
   rb-inotify (= 0.9)
   redcarpet (= 2.2.2)
   rspec-rails (= 2.11.0)
