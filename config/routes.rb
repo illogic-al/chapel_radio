@@ -1,4 +1,14 @@
 ChapelRadio::Application.routes.draw do
+  get "landing_pages/home"
+
+  get "landing_pages/about"
+
+  get "stations/sermons"
+
+  get "stations/events"
+
+  get "stations/worship"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
