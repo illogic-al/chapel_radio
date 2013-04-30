@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 #gem 'bootstrap-sass', '2.1'
+gem 'bourbon', '3.1.1'
 gem 'flat-ui-rails', github: 'illogic-al/flat-ui-rails'
 gem 'jquery-rails'
 gem 'haml', '4.0.1'
