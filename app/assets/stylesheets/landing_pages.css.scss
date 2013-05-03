@@ -1,14 +1,31 @@
 // Place all the styles related to the LandingPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-section { width: 100%; }
+.main {
+  margin: 0;
+  background: #2c3e50;
+}
 
-#header {
+section, footer {
+  h2 { text-align: center; }
+}
+
+header {
   height: em(50);
+  border-bottom: solid thin #34495e;
+}
+
+h1{
+  font-size: em(32);
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
 }
 
 #radio-player {
   height: em(550);
+  background: url('/assets/bg6.jpg') center center;
+  @include background-size(cover);
 }
 
 .radio-ui {
@@ -21,6 +38,27 @@ section { width: 100%; }
   height: em(10);
 }
 
-.recent {
-  height: em(340)
+.highlight {
+  color: #fff;
+  height: em(340);
+}
+
+.featured {
+  border: thin solid #2980b9;
+}
+
+.stations {
+  background: #fff;
+  h1 { color: #2c3e50; }
+}
+
+[class*="span"] {
+  margin-left: 20px;
+}
+footer {
+  height: em(50);
+  background: #7f8c8d;
+  p {
+    margin: 0;
+  }
 }
