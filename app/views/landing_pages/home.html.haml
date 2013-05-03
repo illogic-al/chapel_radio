@@ -1,11 +1,59 @@
-%section#radio-player.container
+%section#radio-player
   .radio-ui.span12
     .playback-indicator
 
-%section.recent.container
-  %h1 Latest Broadcasts
-  .span12
+%section.highlight.recent
+  %h1.text-center
+    %i.icon-time
+    Latest Broadcasts
 
-%section.stations.container
-  %h1 Stations
-  .span12
+  .container
+    .row
+      .featured.span3
+        %a{href: "#"}
+          .section-cover-img
+            %img{src: ""}
+          .section-divide
+            %span.avatar
+          .section-info
+            %p Sermon Title
+            %p Sermon Speaker
+          .section-interactive
+            %button.play
+            %button.hearts
+            %button.likes
+            %button.tweets
+
+      .featured.span3
+        %a{href: "#"}
+          %p Sermon Title
+          %p Sermon Speaker
+
+      .featured.span3
+        %a{href: "#"}
+          %p Sermon Title
+          %p Sermon Speaker
+
+      .featured.span3
+        %a{href: "#"}
+          %p Sermon Title
+          %p Sermon Speaker
+
+%section.highlight.stations
+  %h1.text-center
+    %i.icon-signal
+    Stations
+
+  .container
+    .row
+      .program.span4
+        %a{href: "#"}
+          %h2 Sermons
+
+      .program.span4
+        %a{href: "#"}
+          %h2 Events
+
+      .program.span4
+        %a{href: "#"}
+          %h2 Worship

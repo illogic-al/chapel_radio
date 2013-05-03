@@ -2,18 +2,18 @@
 %html
   %head
     %title Chapel Radio
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     = stylesheet_link_tag    "application", media: "all"
     /[if lt IE 8]
       = stylesheet_link_tag "font-awesome-ie7.min.css", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body
-    %header.container
-      .row
-        .span12
-          %h1.logo.span9 Welcome to Chapel Radio
-          %nav.span3
-            %button.btn.btn-block Sign in to share
+  %body.main
+    %header
+      %h1.logo.pull-left Welcome to Chapel Radio
+      %nav.pull-right
+        .span2
+          %a.btn.btn-large.btn-block.btn-info{href: "#"} Sign in to share
 
     = yield
     %footer
