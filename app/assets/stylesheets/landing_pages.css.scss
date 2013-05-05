@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .main {
   margin: 0;
+  padding: 0;
+  background: #222227;
   background: #2c3e50;
+  background: #222;
 }
 
 section, footer {
@@ -12,20 +15,21 @@ section, footer {
 
 header {
   height: em(50);
-  border-bottom: solid thin #34495e;
 }
 
 h1{
-  font-size: em(32);
+  font-size: em(48);
   font-weight: 700;
-  margin: 0;
   color: #fff;
 }
+
+.logotype { margin: 0; }
 
 #radio-player {
   height: em(550);
   background: url('/assets/bg6.jpg') center center;
   @include background-size(cover);
+  background: #333;
 }
 
 .radio-ui {
@@ -40,25 +44,84 @@ h1{
 
 .highlight {
   color: #fff;
-  height: em(340);
+  min-height: em(340);
 }
 
 .featured {
-  border: thin solid #2980b9;
+  position: relative;
+  height: auto;
+  a {
+    text-decoration: none;
+  }
+}
+
+.section-cover-img {
+  height: em(130);
+  img {
+    @include position( absolute, em(0) 0 0 em(0) );
+    height: inherit;
+    width: 100%;
+  }
+}
+
+.section-divide {
+  @include box-sizing(border-box);
+  @include position( absolute, em(130) 0 0 em(0) );
+  border: 1px solid #fff;
+  width: 100%;
+  z-index: 1;
+}
+
+.avatar {
+  @include position( relative, em(84) 0 0 0 );
+  background: #fff;
+  height: 80px;
+  width: 80px;
+  @include border-radius( 100px );
+  z-index: 10;
+}
+
+.icon-user {
+  font-size: 70px;
+  padding: 5px 0 0 12px;
+}
+
+.section-info {
+  background: #1c4f8e;
+  height: em(130);
+  h3, p, .white { color: #fff; }
+}
+
+.title {
+  padding-top: em(33);
+  line-height: 1.2em;
+  margin: 0;
+}
+
+.section-interactive {
+  height: em(30);
 }
 
 .stations {
   background: #fff;
-  h1 { color: #2c3e50; }
+  background: #191818;
 }
+
+.alpha { margin-left: 0; }
+
+.omega { margin-right: 0; }
 
 [class*="span"] {
   margin-left: 20px;
 }
+
+@media (max-width: 767px) {
+  [class*="span"] {
+    margin-left: 0;
+  }
+}
+
 footer {
   height: em(50);
   background: #7f8c8d;
-  p {
-    margin: 0;
-  }
 }
