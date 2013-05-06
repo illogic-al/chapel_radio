@@ -1,10 +1,12 @@
 %section#radio-player
-  .radio-ui.span12
+  .radio-ui.container
+    %h1.welcome.text-center Welcome to Chapel Radio
+    %h2 Never miss another <span class="glow">word</span>
     .playback-indicator
 
 %section.highlight.recent
   %h1.text-center
-    %i.icon-time
+    %i.icon-clock
     Latest Broadcasts
 
   .container
@@ -12,32 +14,46 @@
       .featured.span3
         %a{href: "#"}
           .section-cover-img
-            %img{src: ""}
+            %img{src: "/assets/bg6.jpg"}
+            .container.avatar
+              %i.icon-play-circled
           .section-divide
-            %span.avatar
-          .section-info
-            %p Sermon Title
+          .section-info.text-center
+            %h3.title Sermon Title
             %p Sermon Speaker
-          .section-interactive
-            %button.play
-            %button.hearts
-            %button.likes
-            %button.tweets
 
       .featured.span3
         %a{href: "#"}
-          %p Sermon Title
-          %p Sermon Speaker
+          .section-cover-img
+            %img{src: "/assets/bg6.jpg"}
+            .container.avatar
+              %i.icon-play-circled
+          .section-divide
+          .section-info.text-center
+            %h3.title Sermon Title
+            %p Sermon Speaker
 
       .featured.span3
         %a{href: "#"}
-          %p Sermon Title
-          %p Sermon Speaker
+          .section-cover-img
+            %img{src: "/assets/bg6.jpg"}
+            .container.avatar
+              %i.icon-play-circled
+          .section-divide
+          .section-info.text-center
+            %h3.title Sermon Title
+            %p Sermon Speaker
 
       .featured.span3
         %a{href: "#"}
-          %p Sermon Title
-          %p Sermon Speaker
+          .section-cover-img
+            %img{src: "/assets/bg6.jpg"}
+            .container.avatar
+              %i.icon-play-circled
+          .section-divide
+          .section-info.text-center
+            %h3.title Sermon Title
+            %p Sermon Speaker
 
 %section.highlight.stations
   %h1.text-center
