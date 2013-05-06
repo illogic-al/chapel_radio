@@ -58,6 +58,7 @@ h1{
 .section-cover-img {
   height: em(130);
   img {
+    @include border-top-radius(0.2em);
     @include position( absolute, em(0) 0 0 em(0) );
     height: inherit;
     width: 100%;
@@ -69,7 +70,7 @@ h1{
   background: #fff;
   height: 80px;
   width: 80px;
-  @include border-radius( 100px );
+  @include border-radius( em(100) );
   z-index: 10;
 }
 
@@ -88,6 +89,8 @@ h1{
 
 .section-info {
   background: #1c4f8e;
+  @include background-image( linear-gradient(top,#1c4f8e,#1b4587) );
+  @include border-bottom-radius(0.2em);
   height: em(130);
   h3, p, .white { color: #fff; }
 }
