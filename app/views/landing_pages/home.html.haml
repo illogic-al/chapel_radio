@@ -1,17 +1,19 @@
 %section#radio-player
-  .radio-ui.container
-    %h1.welcome.text-center Welcome to Chapel Radio
-    %h2 Never miss another <span class="glow">word</span>
-    .playback-indicator
+  .container
+    .radio-ui
+      %h1.welcome.text-center Welcome to Chapel Radio
+      %h2 Never miss another <span class="glow">word</span>
+      .playback-indicator
 
 %section.highlight.recent
-  %h1.text-center
-    %i.icon-clock
-    Latest Broadcasts
+  .row
+    %h1.text-center
+      %i.icon-clock
+      Latest Broadcasts
 
   .container
     .row
-      .featured.span3
+      .featured.span4
         %a{href: "#"}
           .section-cover-img
             %img{src: "/assets/bg6.jpg"}
@@ -22,7 +24,7 @@
             %h3.title Sermon Title
             %p Sermon Speaker
 
-      .featured.span3
+      .featured.span4
         %a{href: "#"}
           .section-cover-img
             %img{src: "/assets/bg6.jpg"}
@@ -33,18 +35,7 @@
             %h3.title Sermon Title
             %p Sermon Speaker
 
-      .featured.span3
-        %a{href: "#"}
-          .section-cover-img
-            %img{src: "/assets/bg6.jpg"}
-            .container.avatar
-              %i.icon-play-circled
-          .section-divide
-          .section-info.text-center
-            %h3.title Sermon Title
-            %p Sermon Speaker
-
-      .featured.span3
+      .featured.span4
         %a{href: "#"}
           .section-cover-img
             %img{src: "/assets/bg6.jpg"}
