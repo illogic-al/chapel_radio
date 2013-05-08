@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   background: #222;
+  background: #262626;
 }
 
 section, footer {
@@ -17,19 +18,28 @@ h1{
   font-size: em(48);
   font-weight: 700;
   color: #fff;
+  color: #e7e7e7;
 }
 
 .logotype { margin: 0; }
 
 #radio-player {
   height: em(550);
-  background: url('/assets/bg6.jpg') center center;
-  @include background-size(cover);
+  margin-top: em(50);
   background: #333;
+  background: #222;
+  background: #444;
+  background: #222227;
+  background: #181818;
+  background: #e7e7e7;
+  background: #2c394c;
 }
 
 .radio-ui {
   position: relative;
+  h1, h2 {
+    color: #262626;
+  }
 }
 
 .playback-indicator {
@@ -45,7 +55,7 @@ h1{
     margin-top: 0;
     padding-top: em(5);
   }
-  padding-bottom: em(10);
+  padding-bottom: em(50);
 }
 
 .featured {
@@ -80,18 +90,22 @@ h1{
   font-size: 60px;
   padding: 5px 0 0 0px;
   color: #fff;
-  color: #1c4f8e;
 }
 
 .icon-play-circled {
   font-size: 85px;
   margin: -2px 0 0 -19px;
+  color: #262626;
+  @include transition (all .20s ease-in-out);
+}
+
+.featured:hover .icon-play-circled {
+  @include transition (all .20s ease-in-out);
   color: #1c4f8e;
 }
 
 .section-info {
   background: #1c4f8e;
-  @include background-image( linear-gradient(top,#1c4f8e,#1b4587) );
   @include background-image( linear-gradient( rgba(0,0,0,0), rgba(0,0,0,0.2) ));
   @include border-bottom-radius(0.2em);
   height: em(130);
