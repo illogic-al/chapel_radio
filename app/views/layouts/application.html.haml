@@ -6,15 +6,23 @@
     = stylesheet_link_tag    "application", media: "all"
     /[if lt IE 8]
       = stylesheet_link_tag "font-awesome-ie7.min.css", media: "all"
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,700,300", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body.main
     %header.container
-      %h1.logotype.pull-left Chapel Radio
-      %nav.span2.pull-right
-        %button.btn.btn-large.btn-block.btn-info{href: "#"}Menu
+      %h1.valign.logotype Chapel Radio
+      %nav.navbar.valign
+        %ul.nav
+          %li
+            %a{href: ""} Stations
+          %li
+            %a{href: ""} Sign in
+        /%button.btn.btn-large.btn-block.btn-info{href: "#"}Menu
 
     = yield
     %footer
       .container
-        %p Brought to you by thebennettproject.com
+        .row
+          .span12
+            %p Brought to you by thebennettproject.com

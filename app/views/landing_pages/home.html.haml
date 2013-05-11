@@ -1,50 +1,66 @@
 %section#radio-player
   .container
     .radio-ui
-      %h1.welcome.text-center Welcome to Chapel Radio
-      %h2 Never miss another <span class="glow">word</span>
+      %hgroup
+        %h1.welcome.text-center Welcome to Chapel Radio
+        %h2.text-center Never miss another <span class="glow">word</span>
       .playback-indicator
 
-%section.highlight.recent
-  .row
-    %h1.text-center
-      %i.icon-clock
-      Latest Broadcasts
-
+%section.highlight
   .container
+    .row
+      %h1.span12
+        %i.icon-clock
+        Latest Broadcasts
+
     .row
       .featured.span4
         %a{href: "#"}
-          .section-cover-img
+          .section-higher
             %img{src: "/assets/bg6.jpg"}
             .container.avatar
               %i.icon-play-circled
-          .section-divide
-          .section-info.text-center
-            %h3.title Sermon Title
-            %p Sermon Speaker
+          .section-lower
+            .span1.text-center
+              %h2.white
+                %i.icon-user
+              %h4.white Lonnie
+            .span3
+              %h2 Mind Monsters
+              %h4 Part 1
+        /.section-lowest
 
       .featured.span4
         %a{href: "#"}
-          .section-cover-img
+          .section-higher
             %img{src: "/assets/bg6.jpg"}
             .container.avatar
               %i.icon-play-circled
-          .section-divide
-          .section-info.text-center
-            %h3.title Sermon Title
-            %p Sermon Speaker
+          .section-lower
+            .span1.text-center
+              %h2.white
+                %i.icon-user
+              %h4.white Lonnie
+            .span3
+              %h2 Mind Monsters
+              %h4 Part 2
+            /.section-lowest
 
       .featured.span4
         %a{href: "#"}
-          .section-cover-img
+          .section-higher
             %img{src: "/assets/bg6.jpg"}
             .container.avatar
               %i.icon-play-circled
-          .section-divide
-          .section-info.text-center
-            %h3.title Sermon Title
-            %p Sermon Speaker
+          .section-lower
+            .span1.text-center
+              %h2.white
+                %i.icon-user
+              %h4.white Lonnie
+            .span3
+              %h2 Mind Monsters
+              %h4 Part 3
+          /.section-lowest
 
 /%section.highlight.stations
 /  %h1.text-center
