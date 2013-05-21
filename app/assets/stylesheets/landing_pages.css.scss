@@ -152,13 +152,11 @@ a:hover, a:focus {text-decoration: none; }
   position: relative;
   margin-top: em(50);
   margin-bottom: em(50);
-  a {
-    text-decoration: none;
-  }
 }
 
 .section-cover-img {
   height: em(130);
+  @include border-top-radius(0.2em);
   img {
     @include border-top-radius(0.2em);
     @include position( absolute, em(0) 0 0 em(0) );
@@ -208,6 +206,7 @@ a:hover, a:focus {text-decoration: none; }
   height: em(80);
   background-color: #fff;
   color: #b1a599;
+  @include box-shadow( 0 0 5px 3px hsla(23, 36%, 90%, 0.7) );
   .span1 {
     background-color: #b1a599;
     height: em(80);
@@ -217,6 +216,7 @@ a:hover, a:focus {text-decoration: none; }
     line-height: 35px;
   }
   h4 { line-height: 1.2em; }
+  z-index: -5;
 }
 
 .span1 > h2, .span1 > h4 { margin: 0; }
@@ -246,6 +246,7 @@ a:hover, a:focus {text-decoration: none; }
 }
 
 footer {
+  background: #b1a599;
   background: #776b5d;
   width: 100%;
   p {
