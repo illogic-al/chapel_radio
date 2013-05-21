@@ -1,9 +1,33 @@
 %section#radio-player
-  .container
-    .radio-ui
+  .container.radio-ui
+    .sradio-ui
       %hgroup
         %h1.welcome.text-center Welcome to Chapel Radio
         %h2.text-center Never miss another <span class="glow">word</span>
+
+      #jquery_jplayer_1.jp-jplayer
+      #jp_container_1.jp-audio
+        .jp-type-single
+          .jp-gui.jp-interface
+            %ul.jp-controls
+              %li
+                %a.jp-play.icon-play{href: "#", tabindex: "1"}
+              %li
+                %a.jp-pause.icon-pause{href: "#", tabindex: "1"}
+              %li
+                %a.jp-mute.icon-volume{href: "#", tabindex: "1", title: "mute"}
+              %li
+                %a.jp-unmute.icon-volume-off{href: "#", tabindex: "1", title: "unmute"}
+            .jp-progress
+              .jp-seek-bar
+                .jp-play-bar
+            .jp-volume-bar
+              .jp-volume-bar-value
+            .jp-time-holder
+              .jp-current-time
+              .jp-duration
+        .jp-title
+
       .playback-indicator
 
 %section.highlight
@@ -15,7 +39,7 @@
 
     .row
       .featured.span4
-        %a{href: "#"}
+        %a{href: "#", rel: "/media/sermons/7_17_11.mp3"}
           .section-higher
             %img{src: "/assets/bg6.jpg"}
             .container.avatar

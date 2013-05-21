@@ -15,6 +15,13 @@ header, footer {
   height: em(130);
 }
 
+@mixin radio-ui-height{
+  height: 80px;
+  height: 5rem;
+}
+
+$radio-player-height: em(440);
+
 .navbar .nav { float: right; }
 h1, h2, h3, h4, h5, h6 { font-weight: 300; font-variant: small-caps; }
 
@@ -33,29 +40,107 @@ h1{
 }
 
 #radio-player {
-  height: em(440);
+  height: $radio-player-height;
   background-color: #ffffff;
   background: url('/assets/chapel_radio_bg.jpg') center center;
 }
 
 .radio-ui {
+  height: inherit;
   position: relative;
   h1 {
-    margin-top: 155px;
-    font-size: 5em;
+    margin-top: 55px;
+    font-size: 3.75em;
     line-height: 1em;
   }
   h1, h2 {
-    color: #8d8070;
     color: #fff;
-    text-shadow: 1px 1px 9px rgba(50, 25, 13, 1);
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0px 1px 3px rgba(50, 25, 13, 1);
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   }
 }
 
-.playback-indicator {
+a:hover, a:focus {text-decoration: none; }
+
+.jp-jplayer, .jp-audio {
+  width: 100%;
+}
+
+.jp-audio {
   position: absolute;
   bottom: 0;
-  height: em(10);
+  //border: 1px solid green;
+  @include radio-ui-height;
+  overflow: hidden;
+  @include border-radius( em(5) );
+}
+
+.jp-gui {
+  position: relative;
+  background-color: rgba(0,0,0, 0.0);
+}
+
+.jp-controls {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 5em;
+  a{
+    color: rgba(255,255,255, 0.1);
+  }
+  a:hover, a:focus {
+    color: rgba(255,255,255, 0.8);
+  }
+  .jp-play:hover, .jp-pause:hover {
+    background-color: rgba(255,255,255, 0.1);
+  }
+}
+
+.jp-mute, .jp-unmute {
+  position: absolute;
+  right: em(45);
+  top: 0px;
+  font-size: 4rem;
+  @include radio-ui-height;
+}
+
+.jp-progress, .jp-volume-bar {
+  position: absolute;
+  top: 25px;
+  background-color: rgba(255,255,255, 0.2);
+  @include border-radius( 20px );
+  overflow: hidden;
+}
+
+.jp-progress {
+  width: 60%;
+  right: em(339);
+}
+
+.jp-volume-bar {
+  right: 1em;
+  width: 12%;
+}
+
+.jp-play-bar, .jp-volume-bar-value {
+  height: em(32);
+  background-color: rgba(255,255,255, 0.5);
+  @include border-radius( 20px );
+}
+
+.jp-time-holder {
+  position: absolute;
+  right: em(220);
+  top: 0rem;
+  font-size: 1.25em;
+  @include radio-ui-height;
+}
+
+.jp-current-time, .jp-duration {
+  margin-bottom: 10px;
+  margin-top: 13px;
+  color: rgba(255,255,255, 0.1);
 }
 
 .highlight {
