@@ -1,34 +1,29 @@
 %section#radio-player
   .container.radio-ui
-    .sradio-ui
-      %hgroup
-        %h1.welcome.text-center Welcome to Chapel Radio
-        %h2.text-center Never miss another <span class="glow">word</span>
+    %hgroup
+      %h1.welcome Welcome to <br /> Chapel Radio
+      %h2 Never miss another <span class="glow">word</span>
+    %a.audiobutton.btn.btn-large.btn-info{href: "#", rel: "/media/sermons/7_17_11"} Start Listening
 
-      #jquery_jplayer_1.jp-jplayer
-      #jp_container_1.jp-audio
-        .jp-type-single
-          .jp-gui.jp-interface
-            %ul.jp-controls
-              %li
-                %a.jp-play.icon-play{href: "#", tabindex: "1"}
-              %li
-                %a.jp-pause.icon-pause{href: "#", tabindex: "1"}
-              %li
-                %a.jp-mute.icon-volume{href: "#", tabindex: "1", title: "mute"}
-              %li
-                %a.jp-unmute.icon-volume-off{href: "#", tabindex: "1", title: "unmute"}
-            .jp-progress
-              .jp-seek-bar
-                .jp-play-bar
-            .jp-volume-bar
-              .jp-volume-bar-value
-            .jp-time-holder
-              .jp-current-time
-              .jp-duration
-        .jp-title
+    #jquery_jplayer_1.jp-jplayer
+    #jp_container_1.jp-audio
+      .jp-type-single
+        .jp-gui.jp-interface
+          %ul.jp-controls
+            %li
+              %a.jp-play.icon-play{href: "#", tabindex: "1"}
+            %li
+              %a.jp-pause.icon-pause{href: "#", tabindex: "1"}
+            %li
+              %a.jp-mute.icon-volume{href: "#", tabindex: "1", title: "mute"}
+            %li
+              %a.jp-unmute.icon-volume-off{href: "#", tabindex: "1", title: "unmute"}
+          .jp-progress
+            .jp-seek-bar
+              .jp-play-bar
+      .jp-title
 
-      .playback-indicator
+    .playback-indicator
 
 %section.highlight
   .container
@@ -41,9 +36,10 @@
       .featured.span4
         %a.audiobutton{href: "#", rel: "/media/sermons/7_17_11"}
           .section-higher
-            %img{src: "/assets/bg6.jpg"}
-            .container.avatar
-              %i.icon-play-circled
+            %img{src: "/assets/mind_monsters_th.jpg"}
+            .overlay
+              .container.avatar
+                %i.icon-play-circled
           .section-lower
             .span1.text-center
               %h2.white
@@ -56,9 +52,10 @@
       .featured.span4
         %a.audiobutton{href: "#", rel: "/media/sermons/7_10_11"}
           .section-higher
-            %img{src: "/assets/bg6.jpg"}
-            .container.avatar
-              %i.icon-play-circled
+            %img{src: "/assets/mind_monsters_th.jpg"}
+            .overlay
+              .container.avatar
+                %i.icon-play-circled
           .section-lower
             .span1.text-center
               %h2.white
@@ -72,9 +69,10 @@
       .featured.span4
         %a.audiobutton{href: "#", rel: "/media/sermons/7_2_11"}
           .section-higher
-            %img{src: "/assets/bg6.jpg"}
-            .container.avatar
-              %i.icon-play-circled
+            %img{src: "/assets/mind_monsters_th.jpg"}
+            .overlay
+              .container.avatar
+                %i.icon-play-circled
           .section-lower
             .span1.text-center
               %h2.white
@@ -87,9 +85,10 @@
       .featured.span4
         %a.audiobutton{href: "#", rel: "/media/sermons/7_10_11"}
           .section-higher
-            %img{src: "/assets/bg6.jpg"}
-            .container.avatar
-              %i.icon-play-circled
+            %img{src: "/assets/mind_monsters_th.jpg"}
+            .overlay
+              .container.avatar
+                %i.icon-play-circled
           .section-lower
             .span1.text-center
               %h2.white
@@ -102,9 +101,10 @@
       .featured.span4
         %a.audiobutton{href: "#", rel: "/media/sermons/7_2_11"}
           .section-higher
-            %img{src: "/assets/bg6.jpg"}
-            .container.avatar
-              %i.icon-play-circled
+            %img{src: "/assets/mind_monsters_th.jpg"}
+            .overlay
+              .container.avatar
+                %i.icon-play-circled
           .section-lower
             .span1.text-center
               %h2.white
