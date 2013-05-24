@@ -1,72 +1,84 @@
 // Place all the styles related to the LandingPages controller here.
+// All SASS variables and mixings go here
+$radio-player-height: em(520);
+$height_hi_lo: 80px;
+$header_color: #8d8070;
+$white: #fff;
+
+@mixin radio-ui-height {
+  height: 80px;
+  height: 5rem;
+}
+
+// Styles
+header, footer { height: $height_hi_lo; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-variant: small-caps;
+  color: $header_color;
+}
+
+h1{ font-size: em(48); }
+
+a {
+  @include transition( color 0.5s ease-in );
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
 .main {
   background-color: #f8f3f0;
   @include box-sizing(border-box);
   font-size: 16px;
   font-family: 'Lato', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-section, footer {
-}
-
-$radio-player-height: em(440);
-$height_hi_lo: em(80);
-
-header, footer {
-  display: table;
-  height: $height_hi_lo;
-}
-
-@mixin radio-ui-height{
-  height: 80px;
-  height: 5rem;
-}
-
-.navbar .nav { float: right; }
-h1, h2, h3, h4, h5, h6 { font-weight: 300; font-variant: small-caps; }
-
-h1{
-  font-size: em(48);
-  color: #8d8070;
-}
-
-.valign {
-  display: table-cell;
-  vertical-align: middle;
+.navbar {
+  display: inline-block;
+  width: auto;
+  float: right;
+  .nav > li > a {
+    line-height: $height_hi_lo;
+    padding: 0 1em;
+  }
 }
 
 .logotype {
   margin: 0;
+  width: 6em;
+  line-height: $height_hi_lo;
+  display: inline-block;
 }
 
 #radio-player {
   height: $radio-player-height;
-  background-color: #ffffff;
-  background: url('/assets/chapel_radio_bg.jpg') center center;
+  background-color: #333;
+  background: #333 url('/assets/mind_monsters.jpg') center 37px no-repeat;
+  background: url('/assets/overlay.png') repeat,
+              #333 url('/assets/mind_monsters.jpg') center 37px no-repeat;
 }
 
 .radio-ui {
   height: inherit;
   position: relative;
+  h1, h2 {
+    color: $white;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5em;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  }
   h1 {
-    margin-top: 55px;
+    margin-top: 89px;
     font-size: 3.75em;
     line-height: 1em;
   }
-  h1, h2 {
-    color: #fff;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0px 1px 3px rgba(50, 25, 13, 1);
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  }
 }
 
-a:hover, a:focus {text-decoration: none; }
-
-.jp-jplayer, .jp-audio {
-  width: 100%;
-}
+// jPlayer controls UI
+.jp-jplayer, .jp-audio { width: 100%; }
 
 .jp-audio {
   position: absolute;
@@ -77,75 +89,59 @@ a:hover, a:focus {text-decoration: none; }
   @include border-radius( em(5) );
 }
 
-.jp-gui {
-  position: relative;
-  background-color: rgba(0,0,0, 0.0);
-}
+.jp-gui {  position: relative; }
 
 .jp-controls {
   padding: 0;
   margin: 0;
   list-style: none;
-  font-size: 5em;
+  font-size: 4.75em;
   a{
-    color: rgba(255,255,255, 0.1);
-  }
-  a:hover, a:focus {
-    color: rgba(255,255,255, 0.8);
-  }
-  .jp-play:hover, .jp-pause:hover {
-    background-color: rgba(255,255,255, 0.1);
+    color: rgba(255,255,255, 0.3);
+    &:hover, &:focus {
+      @include transition( (all) 0.3s ease-in );
+      color: rgba(255,255,255, 0.9);
+      text-shadow: 3px 2px 3px rgba(43,43,43, 0.9), 0 0 0 rgba(0,0,0, 0.9), 3px 2px 3px rgba(43,43,43, 0.5) ;
+    }
   }
 }
 
+.jp-play, .jp-pause{
+  @include position(absolute, 0px 0 0 -25px);
+}
+
 .jp-mute, .jp-unmute {
-  position: absolute;
-  right: em(45);
-  top: 0px;
+  @include position(absolute, 0px 0 0 70px);
   font-size: 4rem;
   @include radio-ui-height;
 }
 
-.jp-progress, .jp-volume-bar {
-  position: absolute;
-  top: 25px;
-  background-color: rgba(255,255,255, 0.2);
+.jp-progress {
+  @include position(absolute, 0 0 -55px 170px);
+  width: 80%;
+  margin-right: -10px;
+}
+
+.jp-seek-bar {
+  //border: 1px solid #444;
+  //@include box-shadow( 3px 2px 3px rgba(43,43,43, 1) inset);
+  background-color: rgba(255,255,255, 0.1);
   @include border-radius( 20px );
   overflow: hidden;
+  &:hover .jp-play-bar {
+    background-color: rgba(255,255,255, 0.9);
+    @include transition( (all) 0.3s ease-in );
+  }
 }
 
-.jp-progress {
-  width: 60%;
-  right: em(339);
-}
-
-.jp-volume-bar {
-  right: 1em;
-  width: 12%;
-}
-
-.jp-play-bar, .jp-volume-bar-value {
+.jp-play-bar {
   height: em(32);
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(255,255,255, 0.3);
   @include border-radius( 20px );
-}
-
-.jp-time-holder {
-  position: absolute;
-  right: em(220);
-  top: 0rem;
-  font-size: 1.25em;
-  @include radio-ui-height;
-}
-
-.jp-current-time, .jp-duration {
-  margin-bottom: 10px;
-  margin-top: 13px;
-  color: rgba(255,255,255, 0.1);
 }
 
 .highlight {
-  color: #fff;
+  color: $white;
   h1 { margin-top: .625em; margin-bottom: 0; }
 }
 
@@ -159,11 +155,19 @@ a:hover, a:focus {text-decoration: none; }
   height: em(130);
   @include border-top-radius(0.2em);
   img {
-    @include border-top-radius(0.2em);
     @include position( absolute, em(0) 0 0 em(0) );
     height: inherit;
     width: 100%;
   }
+}
+
+.overlay {
+  @include position(relative);
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.2) url('/assets/overlay.png') repeat;
+  @include border-top-radius(0.7em);
+  z-index: 5;
 }
 
 .avatar {
@@ -177,7 +181,7 @@ a:hover, a:focus {text-decoration: none; }
 .icon-play-circled {
   font-size: 80px;
   margin: -2px 0 0 -19px;
-  color: #fff;
+  color: $white;
   color: rgba(255,255,255, 0.2);
   @include transition (all .20s ease-in-out);
 }
@@ -191,23 +195,21 @@ a:hover, a:focus {text-decoration: none; }
   color: rgba(255,255,255, .7);
 }
 
-.white { color: #fff; }
-
 .section-higher {
   height: em(210);
   img {
     @include border-top-radius(8px);
     @include position( absolute, em(0) 0 0 em(0) );
-    height: inherit;
-    width: 100%;
+    height: 210px;
+    width: 466px;
   }
 }
 
 .section-lower {
   height: em(80);
-  background-color: #fff;
+  background-color: $white;
   color: #b1a599;
-  @include box-shadow( 0 0 5px 3px hsla(23, 36%, 90%, 0.7) );
+  //@include box-shadow( 0 0 5px 3px hsla(23, 36%, 90%, 0.7) );
   .span1 {
     background-color: #b1a599;
     height: em(80);
@@ -217,7 +219,6 @@ a:hover, a:focus {text-decoration: none; }
     line-height: 35px;
   }
   h4 { line-height: 1.2em; }
-  z-index: -5;
 }
 
 .span1 > h2, .span1 > h4 { margin: 0; }
@@ -226,6 +227,8 @@ a:hover, a:focus {text-decoration: none; }
   background-color: #f8f3f0;
   height: em(50);
 }
+
+.white { color: $white; }
 
 .stations {
   background: #191818;
@@ -249,9 +252,10 @@ a:hover, a:focus {text-decoration: none; }
 footer {
   background: #776b5d;
   background: #b1a599;
-  color: #fff;
+  color: $white;
   width: 100%;
   p {
-    line-height: $height_hi_lo;
+    line-height: $height_hi_lo ;
+    margin-bottom: 0;
   }
 }
