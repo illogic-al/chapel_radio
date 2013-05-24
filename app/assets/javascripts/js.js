@@ -6,6 +6,7 @@ $(document).ready(function(){
         oga: "/media/sermons/7_10_11.ogg"
       });
     },
+    volume: 1.0,
     swfPath: "/assets",
     supplied: "oga, mp3"
     //supplied: "m4a, oga"
@@ -23,8 +24,7 @@ $(document).ready(function(){
         oga: index + ".ogg"  // load ogg if browser supports it
         }).jPlayer("play");
       },
-      ended: function (event) {
-      },
+      volume: 1.0,
       swfPath: "/assets",            // else look for flash here to load mp3
       supplied: "mp3, oga"
     });
