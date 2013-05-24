@@ -7,7 +7,8 @@
     /[if lt IE 8]
       = stylesheet_link_tag "font-awesome-ie7.min.css", media: "all"
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,700,300", media: "all"
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:400,700,300", media: "all"
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:300,400,700,900", media: "all"
+    -# TODO: See which of the Lato fonts is in use. Trim only to those used for production.
     = javascript_include_tag "application"
     = javascript_include_tag "jquery.jplayer", "/assets/js"
     = csrf_meta_tags
@@ -16,10 +17,10 @@
       %h1.logotype Chapel Radio
       %nav.navbar
         %ul.nav
-          %li
+          -#%li
             %a{href: ""} Stations
           %li
-            %a{href: ""} About
+            %a{href: "/about"} About
         /%button.btn.btn-large.btn-block.btn-info{href: "#"}Menu
 
     = yield
