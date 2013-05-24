@@ -10,17 +10,18 @@
 section, footer {
 }
 
+$radio-player-height: em(440);
+$height_hi_lo: em(80);
+
 header, footer {
   display: table;
-  height: em(130);
+  height: $height_hi_lo;
 }
 
 @mixin radio-ui-height{
   height: 80px;
   height: 5rem;
 }
-
-$radio-player-height: em(440);
 
 .navbar .nav { float: right; }
 h1, h2, h3, h4, h5, h6 { font-weight: 300; font-variant: small-caps; }
@@ -246,10 +247,11 @@ a:hover, a:focus {text-decoration: none; }
 }
 
 footer {
-  background: #b1a599;
   background: #776b5d;
+  background: #b1a599;
+  color: #fff;
   width: 100%;
   p {
-    line-height: em(130);
+    line-height: $height_hi_lo;
   }
 }
