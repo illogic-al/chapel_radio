@@ -3,6 +3,7 @@
 $radio-player-height: em(520);
 $height_hi_lo: 80px;
 $header_color: #8d8070;
+$header_color: #555;
 $white: #fff;
 
 @mixin radio-ui-height {
@@ -33,7 +34,7 @@ a {
   background: #eeae4b;
   @include transition( (all) 0.3s ease-in );
   @include border-radius( 3px );
-  font-weight: 400;#b1a599
+  font-weight: 400;
   text-shadow: none;
   &:hover {
     @include transition( (all) 0.3s ease-in );
@@ -195,22 +196,25 @@ a {
   z-index: 10;
 }
 
+.featured .icon-play-circled {
+  @include transition (all .3s ease-in);
+}
+
+.featured:hover .icon-play-circled {
+  @include transition (all .3s ease-in);
+  color: rgba(255,255,255, .8);
+}
+
 .icon-play-circled {
   font-size: 80px;
   margin: -2px 0 0 -19px;
   color: $white;
   color: rgba(255,255,255, 0.2);
-  @include transition (all .20s ease-in-out);
 }
 
 .icon-user, .icon-clock { font-size: 48px; }
 
 .icon-user { margin-top: 5px; }
-
-.featured:hover .icon-play-circled {
-  @include transition (all .20s ease-in-out);
-  color: rgba(255,255,255, .7);
-}
 
 .section-higher {
   height: em(210);
