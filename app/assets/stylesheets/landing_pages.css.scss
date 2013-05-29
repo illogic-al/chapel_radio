@@ -77,17 +77,21 @@ a {
 .radio-ui {
   height: inherit;
   position: relative;
+}
+
+hgroup {
   h1, h2 {
     color: $white;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.5em;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   }
-  h1 {
-    margin-top: 89px;
-    font-size: 3.75em;
-    line-height: 1em;
-  }
+}
+
+.welcome {
+  margin-top: 1.5em;
+  font-size: 3.75em;
+  line-height: 1em;
 }
 
 // jPlayer controls UI
@@ -127,7 +131,7 @@ a {
 
 .jp-mute, .jp-unmute {
   @include position(absolute, 0px 0 0 70px);
-  font-size: 4rem;
+  font-size: 0.8421em;
   @include radio-ui-height;
 }
 
@@ -281,7 +285,167 @@ footer {
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (min-width: 20em) and (max-width: 30em) { /* 320px */
+  @mixin radio-ui-height {
+    height: 48px;
+    height: 3rem;
+  }
+
+  $height_hi_lo: 48px;
+
+  header, footer { height: $height_hi_lo; }
+
+  body {  padding: 0; }
+
+  h1, .logotype, .welcome { font-size: 2em; }
+
+  .logotype {
+    width: 70%;
+    line-height: $height_hi_lo;
+  }
+
+  .navbar {
+    width: 30%;
+    .nav > li > a { line-height: $height_hi_lo; }
+  }
+
+  #radio-player { height: em(400); }
+
+  .radio-ui {
+    background-color: rgba(0,0,0, 0.4);
+    text-align: center;
+  }
+
+  hgroup {
+    // Weird. Unless I gave the hgroup an overflow of hidden the .welcome selector below
+    // had weird behavior with the left margin, when setting the top margin
+    // TODO: Find out if this is a bug in gecko, make testcase, then bugzilla it.
+    overflow: hidden;
+    width: 100%;
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+
+  .welcome {
+    margin: 0px auto; /* TODO: Figure out why this isn't centered if the margin is small */
+    font-size: 2em;
+    line-height: 1em;
+    width: 7em;
+    /* Box-model issue? */
+  }
+
+  .jp-audio {
+    @include border-radius( 0px );
+  }
+
+  .jp-controls {
+    font-size: 3.5em;
+  }
+
+  .jp-play, .jp-pause {
+    @include position(absolute, 0px 0 0 -10px);
+  }
+
+  .jp-mute, .jp-unmute {
+    font-size: 0.8421em;
+    @include position(absolute, 0px 5px 0 auto);
+  }
+
+  .jp-progress {
+    @include position(absolute, 55px 0 0 0px );
+    width: 100%;
+  }
+
+  .jp-seek-bar, .jp-play-bar {
+    @include border-radius( 0px );
+    height: em(24);
+  }
+
+  .highlight {
+    margin: 0 0.5em;
+    h1 { font-size: 1.75em; line-height: 1em; }
+  }
+  .icon-clock { font-size: 1.0em; }
+
+  .featured {
+    margin: em(20);
+    &:hover { @include box-shadow(none); }
+  }
+
+  .featured, .section-higher, .section-cover-img, .section-lower {
+    height: 80px;
+    overflow: hidden;
+  }
+
+  .section-higher {
+    background-color: #333;
+    img { display: none; }
+  }
+
+  .section-lower {
+    .span1 {
+      display: block;
+      @include position(absolute, 0px 0px 0 0);
+      width: 80px;
+      background-color: transparent;
+      z-index: 10;
+      background: rgba(0,0,0, 0.1);
+      .white {
+        margin: 0;
+        margin-top: 2px;
+        font-size: 1.0em;
+      }
+      font-size: 1em;
+    }
+    .span3 {
+      @include position(absolute, 0px 0 0 80px);
+      height: 80px;
+      width: 55%;
+      z-index: 10;
+    }
+    h2, h4 {
+      color: #fff;
+      font-variant: normal;
+      line-height: 0.9em;
+      margin-left: 10px;
+    }
+    h2 {
+      font-size: 1.2em;
+    }
+    h4 {
+      font-size: 1em;
+    }
+  }
+
+  .avatar {
+    @include position(static);
+    height: auto;
+  }
+
+  .icon-play-circled {
+    font-size: 4em;
+    @include position(absolute, 2px 0 0 15px);
+    padding-top: 8px;
+    padding-right: 3px;
+    height: 72px;
+    width: 80px;
+    background: rgba(255,255,255, 0.9) url('/assets/overlay.png') repeat;
+    color: rgba(255,255,255, 0.9);
+  }
+
+  .featured:hover .icon-play-circled {
+    color: #fff;
+    background: rgba(255,255,255, 0.3) url('/assets/overlay.png') repeat;
+  }
+
+  footer p {
+    line-height: $height_hi_lo;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 20em) and (max-width: 30em) { /* 320px to 480 px */
   [class*="span"] {
     margin-left: 0;
   }
