@@ -59,5 +59,6 @@ end
 # gem 'debugger'
 
 group :production do
-  gem 'mysql'
+#  gem 'mysql'
+  gem 'pg', '0.12.2'
 end
