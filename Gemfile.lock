@@ -105,8 +105,8 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.2)
-    mysql (2.9.1)
     nokogiri (1.5.9)
+    pg (0.12.2)
     polyglot (0.3.3)
     props (1.0.0)
     pry (0.9.12.1)
@@ -207,7 +207,7 @@ DEPENDENCIES
   jquery-rails
   libnotify (= 0.5.9)
   markdown (= 1.0.0)
-  mysql
+  pg (= 0.12.2)
   rails (= 3.2.13)
   rb-fsevent (= 0.9.1)
   rb-inotify (= 0.9)
