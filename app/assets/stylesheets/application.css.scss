@@ -9,18 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require twitter/bootstrap
- *= require twitter/bootstrap-responsive
- *= require fontello
- *= require font-awesome
- *= require museo_sans
- *= require landing_pages
  */
 @import "bourbon";
 @import "twitter/bootstrap";
 @import "twitter/bootstrap-responsive";
-@import "fontello";
 @import "font-awesome";
 @import "museo_sans";
-@import "stations";
 @import "landing_pages";
+@import "stations";
+@import "fontello";
