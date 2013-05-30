@@ -1,7 +1,6 @@
 ChapelRadio::Application.routes.draw do
-  get "landing_pages/home"
-
-  get "landing_pages/about"
+  root to: 'landing_pages#home'
+  match '/about', to: 'landing_pages#about'
 
   get "stations/sermons"
 
