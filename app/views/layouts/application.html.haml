@@ -29,19 +29,4 @@
         .row
           .span12
             %p Brought to you by thebennettproject.com
-
-    / Piwik Tracking Code
-    :javascript
-      var pkBaseURL = (("https:" ==
-      document.location.protocol) ? "https://thebennettproject.com/piwik/" : "http://thebennettproject.com/piwik/");
-      document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-    :javascript
-      try {
-        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 6);
-        piwikTracker.trackPageView();
-        piwikTracker.enableLinkTracking();
-      } catch( err ) {}
-    %noscript
-      %p
-        %img{src: "http://thebennettproject.com/piwik/piwik.php?idsite=6", style: "border:0", alt: ""}
-    / End Piwik Tracking Code
+    = piwik_tracking_tag
