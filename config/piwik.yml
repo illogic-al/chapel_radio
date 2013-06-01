@@ -1,5 +1,5 @@
 # Configuration:
-# 
+#
 # disabled
 #   false if tracking tag should be shown
 # use_async
@@ -19,7 +19,7 @@ production:
 development:
   piwik:
     id_site: 6
-    url: localhost
+    url: thebennettproject.com/piwik
     disabled: false
     use_async: false
     hostname: localhost
