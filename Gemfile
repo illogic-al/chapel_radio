@@ -12,8 +12,8 @@ gem 'markdown', '1.0.0'
 gem 'redcarpet', '2.2.2'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'piwik_analytics', github: 'illogic-al/piwik-ruby-tracking'
-
+#gem 'piwik_analytics', github: 'illogic-al/piwik-ruby-tracking'
+gem 'piwik_analytics', '~> 1.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
