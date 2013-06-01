@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/illogic-al/piwik-ruby-tracking.git
-  revision: f295648005e6d357f9d40b433f4d820d2303c580
+  revision: 561f59bce54a11e04e27d8983520ed209b73130b
   specs:
     piwik_analytics (1.0.1)
       actionpack

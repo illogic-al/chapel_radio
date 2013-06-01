@@ -20,8 +20,8 @@ development:
   piwik:
     id_site: 6
     url: localhost
-    disabled: true
-    use_async: true
+    disabled: false
+    use_async: false
     hostname: localhost
 
 test:
