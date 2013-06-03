@@ -68,10 +68,10 @@ a {
 
 #radio-player {
   height: $radio-player-height;
-  background-color: #333;
-  background: #333 url('/assets/mind_monsters.jpg') center 37px no-repeat;
+  background-color: #090f0f;
+  background: #090f0f url('/assets/the_heist.jpg') center center no-repeat;
   background: url('/assets/overlay.png') repeat,
-              #333 url('/assets/mind_monsters.jpg') center 37px no-repeat;
+              #090f0f url('/assets/the_heist.jpg') center center no-repeat;
 }
 
 .radio-ui {
@@ -309,10 +309,14 @@ footer {
     .nav > li > a { line-height: $height_hi_lo; }
   }
 
-  #radio-player { height: em(400); }
+  #radio-player {
+    height: em(400);
+    background: url('/assets/overlay.png') repeat,
+              #090f0f url('/assets/the_heist.jpg') center/cover no-repeat;
+  }
 
   .radio-ui {
-    background-color: rgba(0,0,0, 0.4);
+    #background-color: rgba(0,0,0, 0.4);
     text-align: center;
   }
 
@@ -443,9 +447,7 @@ footer {
     line-height: $height_hi_lo;
     text-align: center;
   }
-}
 
-@media screen and (min-width: 20em) and (max-width: 30em) { /* 320px to 480 px */
   [class*="span"] {
     margin-left: 0;
   }
