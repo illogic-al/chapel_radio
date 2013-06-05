@@ -19,6 +19,7 @@ gem 'piwik_analytics', github: 'illogic-al/piwik-ruby-tracking'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
+  gem 'thin', '1.5.1'
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
