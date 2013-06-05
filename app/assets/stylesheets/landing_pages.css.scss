@@ -6,6 +6,12 @@ $header_color: #8d8070;
 $header_color: #555;
 $white: #fff;
 
+@mixin border-radius($radius: 1px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
 @mixin radio-ui-height {
   height: 80px;
   height: 5rem;
@@ -285,7 +291,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 20em) and (max-width: 30em) { /* 320px */
+@media  (max-width: 22.5em) { /* 360px @ 16 */
   @mixin radio-ui-height {
     height: 48px;
     height: 3rem;
@@ -450,5 +456,63 @@ footer {
 
   [class*="span"] {
     margin-left: 0;
+  }
+}
+
+@media (min-width: 22.6em) and (max-width: 640px) {
+  .highlight {
+    h1 { font-size: 2em; }
+    .icon-clock { font-size: 30px; }
+  }
+}
+
+@media (min-width: 380px) and (max-width: 640px) {
+  .span4 { width: 370px; }
+  .featured { margin: 2em auto; }
+
+}
+
+@media (min-width: 641px) and (max-width: 767px) {
+  .span4 { width: 300px; }
+  .featured { margin: 2em 1em 2em auto; }
+
+}
+
+@media (min-width: 22.6em) and (max-width: 767px) {
+  body { padding: 0; }
+
+  .span1 { width: 70px; }
+  .span3 { width: 220px; margin-left: 10px;}
+
+  .row {
+    text-align: center;
+    margin-left: 0;
+    [class*="span"] {
+      display: inline-block;
+    }
+  }
+
+  .span1, .span3 {
+    float: left;
+    height: 80px;
+    h2 { font-size: 1.75em; }
+    text-align: left;
+  }
+
+  .white { text-align: center; }
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .span4 { width: 320px; }
+  .span1 { width: 70px; }
+  .span3 { width: 220px; margin-left: 10px;}
+
+  .row {
+    margin-left: 20px;
+  }
+
+  .span1, .span3 {
+    h2 { font-size: 1.75em; }
   }
 }
