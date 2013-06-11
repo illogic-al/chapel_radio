@@ -250,14 +250,24 @@ hgroup {
     background-color: #333;
     height: em(80);
     margin-left: 0;
+    width: 70px;
+  }
+  .span3 {
+    margin: 0 0 0 5px;
+    h2 { font-size: 1.5em; }
+    h2, h4 {
+      margin-top: 3px;
+      margin-bottom: 0;
+    }
   }
   h2 {
     line-height: 35px;
   }
-  h4 { line-height: 1.2em; }
+  h4 { line-height: 1.0em; font-size: 1em; }
 }
 
 .span1 > h2, .span1 > h4 { margin: 0; }
+
 
 .section-lowest {
   background-color: #f8f3f0;
