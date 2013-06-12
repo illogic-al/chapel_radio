@@ -306,7 +306,7 @@ footer {
 }
 
 @media (max-width: 767px) {
-  .logotype { font-size: 2em; }
+  .logotype { font-size: 1.875em; }
 
   #radio-player {
     height: em(400);
@@ -378,7 +378,7 @@ footer {
 
   body {  padding: 0; }
 
-  h1, .logotype, .welcome { font-size: 2em; }
+  h1, .welcome { font-size: 2em; }
 
   .logotype {
     width: 60%;
