@@ -15,7 +15,7 @@ $(document).ready(function(){
   // Change to track defined by 'rel' attribute of link with audioButton class
   $(".audiobutton").click(function() {
     // Hide welcome text once media starts playing
-    $("#intro_msg").hide("slow")
+    $("#intro_msg").hide("slow");
 
     $("#jquery_jplayer_1").jPlayer("destroy");
     index = this.rel;
