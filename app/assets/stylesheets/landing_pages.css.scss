@@ -301,30 +301,7 @@ footer {
   }
 }
 
-@media  (max-width: 22.5em) { /* 360px @ 16 */
-  @mixin radio-ui-height {
-    height: 48px;
-    height: 3rem;
-  }
-
-  $height_hi_lo: 48px;
-
-  header, footer { height: $height_hi_lo; }
-
-  body {  padding: 0; }
-
-  h1, .logotype, .welcome { font-size: 2em; }
-
-  .logotype {
-    width: 60%;
-    line-height: $height_hi_lo;
-  }
-
-  .navbar {
-    width: 30%;
-    .nav > li > a { line-height: $height_hi_lo; }
-  }
-
+@media (max-width: 767px) {
   #radio-player {
     height: em(400);
     background: url('/assets/overlay.png') repeat,
@@ -380,6 +357,31 @@ footer {
   .jp-seek-bar, .jp-play-bar {
     @include border-radius( 0px );
     height: em(24);
+  }
+}
+
+@media  (max-width: 22.5em) { /* 360px @ 16 */
+  @mixin radio-ui-height {
+    height: 48px;
+    height: 3rem;
+  }
+
+  $height_hi_lo: 48px;
+
+  header, footer { height: $height_hi_lo; }
+
+  body {  padding: 0; }
+
+  h1, .logotype, .welcome { font-size: 2em; }
+
+  .logotype {
+    width: 60%;
+    line-height: $height_hi_lo;
+  }
+
+  .navbar {
+    width: 30%;
+    .nav > li > a { line-height: $height_hi_lo; }
   }
 
   .highlight {
@@ -485,7 +487,6 @@ footer {
 @media (min-width: 641px) and (max-width: 767px) {
   .span4 { width: 300px; }
   .featured { margin: 2em 1em 2em auto; }
-
 }
 
 @media (min-width: 22.6em) and (max-width: 767px) {
@@ -514,6 +515,7 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+  .jp-progress { width: 75%; }
   .span4 { width: 320px; }
   .span1 { width: 70px; }
   .span3 { width: 220px; margin-left: 10px;}
