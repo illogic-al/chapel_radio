@@ -67,7 +67,7 @@ a {
 
 .logotype {
   margin: 0;
-  width: 7em;
+  width: 8em;
   line-height: $height_hi_lo;
   display: inline-block;
 }
@@ -83,6 +83,10 @@ a {
 .radio-ui {
   height: inherit;
   position: relative;
+}
+
+.hide {
+  visibility: hidden;
 }
 
 hgroup {
@@ -302,6 +306,8 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .logotype { font-size: 2em; }
+
   #radio-player {
     height: em(400);
     background: url('/assets/overlay.png') repeat,
@@ -481,7 +487,6 @@ footer {
 @media (min-width: 380px) and (max-width: 640px) {
   .span4 { width: 370px; }
   .featured { margin: 2em auto; }
-
 }
 
 @media (min-width: 641px) and (max-width: 767px) {
@@ -516,9 +521,10 @@ footer {
 
 @media (min-width: 768px) and (max-width: 979px) {
   .jp-progress { width: 75%; }
-  .span4 { width: 320px; }
+
   .span1 { width: 70px; }
   .span3 { width: 220px; margin-left: 10px;}
+  .span4 { width: 320px; }
 
   .row {
     margin-left: 20px;

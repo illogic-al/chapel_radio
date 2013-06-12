@@ -1,19 +1,15 @@
 $(document).ready(function(){
-  $("#jquery_jplayer_1").jPlayer({
-    ready: function () {
-      $(this).jPlayer("setMedia", {
-        mp3: "http://thebennettproject.com/media/sermons/6913.mp3",
-        oga: "http://thebennettproject.com/media/sermons/6913.ogg"
-      });
-    },
-    volume: 1.0,
-    swfPath: "/assets",
-    supplied: "oga, mp3"
-    //supplied: "m4a, oga"
-  });
+  // Hide Player controls after everything is loaded
+  $("#jp_container_1").addClass("hide");
 
   // Change to track defined by 'rel' attribute of link with audioButton class
   $(".audiobutton").click(function() {
+    // Show jplayer container once audiobutton selector is clicked.
+    if ($("#jp_container_1").hasClass("hide")) {
+      $("#jp_container_1").removeClass("hide");
+    }
+
+    // Destroy any ongoing jplayer instances
     $("#jquery_jplayer_1").jPlayer("destroy");
     index = this.rel;
 
@@ -28,6 +24,10 @@ $(document).ready(function(){
       swfPath: "/assets",            // else look for flash here to load mp3
       supplied: "mp3, oga"
     });
+
+    // Hide welcome text once media starts playing
+    $("#intro_msg").hide("slow")
   });
+
 });
 
