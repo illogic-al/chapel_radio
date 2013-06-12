@@ -96,6 +96,10 @@ hgroup {
     line-height: 1.5em;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   }
+  h3 {
+    color: #fff;
+    font-size: 1.375em;
+  }
 }
 
 .welcome {
@@ -309,7 +313,7 @@ footer {
   .logotype { font-size: 1.875em; }
 
   #radio-player {
-    height: em(400);
+    height: em(300);
     background: url('/assets/overlay.png') repeat,
               #090f0f url('/assets/the_heist.jpg') center/cover no-repeat;
   }
