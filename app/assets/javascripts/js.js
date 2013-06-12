@@ -14,6 +14,9 @@ $(document).ready(function(){
 
   // Change to track defined by 'rel' attribute of link with audioButton class
   $(".audiobutton").click(function() {
+    // Hide welcome text once media starts playing
+    $("#intro_msg").hide("slow")
+
     $("#jquery_jplayer_1").jPlayer("destroy");
     index = this.rel;
 
@@ -28,9 +31,6 @@ $(document).ready(function(){
       swfPath: "/assets",            // else look for flash here to load mp3
       supplied: "mp3, oga"
     });
-
-    // Hide welcome text once media starts playing
-    $("#intro_msg").hide("slow")
   });
 });
 
