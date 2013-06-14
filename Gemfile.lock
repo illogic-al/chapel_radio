@@ -74,7 +74,6 @@ GEM
     font-awesome-rails (3.0.2.0)
       railties (>= 3.1)
     formatador (0.2.4)
-    google-analytics-rails (0.0.4)
     growl (1.0.3)
     guard (1.7.0)
       formatador (>= 0.2.4)
@@ -211,10 +210,9 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   bourbon (= 3.1.1)
   capybara (= 1.1.2)
-  closure-compiler
+  closure-compiler (= 1.1.10)
   coffee-rails (= 3.2.2)
   font-awesome-rails (= 3.0.2.0)
-  google-analytics-rails
   growl (= 1.0.3)
   guard-rspec (= 1.2.1)
   guard-spork (= 1.4.2)

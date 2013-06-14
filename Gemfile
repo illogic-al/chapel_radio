@@ -13,8 +13,7 @@ gem 'redcarpet', '2.2.2'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'piwik_analytics', github: 'illogic-al/piwik-ruby-tracking'
-#gem 'piwik_analytics', '~> 1.0.1'
-gem 'google-analytics-rails'
+#gem 'google-analytics-rails'
 gem 'thin', '1.5.1'
 
 # Bundle edge Rails instead:
@@ -34,8 +33,7 @@ end
 group :assets do
   gem 'sass-rails',   '3.2.5'
   gem 'coffee-rails', '3.2.2'
-  gem 'closure-compiler'
-  #gem 'uglifier', '1.2.3'
+  gem 'closure-compiler', '1.1.10'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
