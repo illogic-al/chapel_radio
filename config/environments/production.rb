@@ -20,8 +20,14 @@ ChapelRadio::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Don't compress assets
+  # config.assets.compress = false
+
   # Minify js assets with closure compiler
   config.assets.js_compressor = :closure
+
+  # Serve assets without web server
+  # config.serve_static_assets=true
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
@@ -48,9 +54,12 @@ ChapelRadio::Application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
 
+  # Add fonts
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += %w( font-awesome-ie7.min.css )
+  config.assets.precompile += %w( font-awesome-ie7.min.css .svg .eot .woff .ttf )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
