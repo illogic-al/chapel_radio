@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/illogic-al/piwik-ruby-tracking.git
+  revision: 6b7989b70d2e40e7b54f65e494a8716cfdc33b1a
+  specs:
+    piwik_analytics (1.0.3)
+      actionpack
+      activesupport
+      rails (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -213,6 +222,7 @@ DEPENDENCIES
   libnotify (= 0.5.9)
   markdown (= 1.0.0)
   pg (= 0.12.2)
+  piwik_analytics!
   rails (= 3.2.13)
   rb-fsevent (= 0.9.1)
   rb-inotify (= 0.9)

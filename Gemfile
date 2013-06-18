@@ -12,7 +12,7 @@ gem 'markdown', '1.0.0'
 gem 'redcarpet', '2.2.2'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
-#gem 'piwik_analytics', github: 'illogic-al/piwik-ruby-tracking'
+gem 'piwik_analytics', github: 'illogic-al/piwik-ruby-tracking'
 #gem 'google-analytics-rails'
 gem 'thin', '1.5.1'
 
